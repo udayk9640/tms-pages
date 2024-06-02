@@ -1,0 +1,284 @@
+<!-- 
+  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/png" href="images/Banner_Hit.png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tender Management System</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/SpryTabbedPanels.css" type="text/css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Black+Ops+One"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap-dropdownhover.min.css" />
+    <link rel="stylesheet" href="css/style2.css" />
+    <style>
+      .tab {
+        border-radius: 10px;
+        border: 1px black solid;
+        background-color: #ffe5cc;
+        margin-left: 25%;
+        width: 450px;
+        color: green;
+        font-weight: bold;
+        font-style: normal;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding: 20px;
+      }
+      .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+      .notice, .registration {
+        flex: 1;
+        margin: 10px;
+      }
+      .notice .marquee, .registration .marquee-content {
+        border: 2px #26b0b0 solid;
+        background-color: white;
+        padding: 10px;
+      }
+      .notice .marquee h4, .registration h4 {
+        background-color: #26b0b0;
+        margin-top: -1.8px;
+        padding: 5px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Including the header of the page -->
+    <div class="header">
+      <img
+        src="images/Banner_Hit.png"
+        alt="HIT Haldia"
+        width="70px"
+        height="70px"
+      />
+      <h1>Tender Management System</h1>
+      <p>A HIT Haldia Project</p>
+      <ul>
+        <li><a href="viewProfile.html">Profile</a></li>
+        <li><a href="Logout.html">Logout</a></li>
+      </ul>
+    </div>
+
+    <div class="menu" style = "display:flex;">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#">Tenders</a>
+          <ul>
+            <li><a href="vendorViewTender.html">View all Tenders</a></li>
+            <li><a href="loginFailed.html">Apply for a Tender</a></li>
+            <li><a href="loginFailed.html">Bid Approval Status</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Vendors</a>
+          <ul>
+            <li><a href="loginFailed.html">List of vendors</a></li>
+            <li><a href="loginFailed.html">Approval Status</a></li>
+            <li><a href="loginFailed.html">Search Vendor</a></li>
+          </ul>
+        </li>
+        <li><a href="register.html">Register</a></li>
+        <li>
+          <form class="search-form" action="vendorSearchTender.html">
+            <input type="text" placeholder="Find Tenders by name" required />
+            <button type="submit">Search</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="welcome-marquee"
+      style="
+        color: white;
+        background-color: green;
+        margin-top: -15px;
+        margin-bottom: 12px;
+      "
+    >
+      <marquee>Welcome to Tender Management Site</marquee>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content-wrapper">
+        <div class="notice">
+          <div
+            class="marquee"
+            style="border: 2px #26b0b0 solid; background-color: white"
+          >
+            <h4
+              style="
+                background-color: #26b0b0;
+                margin-top: -1.8px;
+                padding: 5px;
+              "
+            >
+              <i class="glyphicon glyphicon-volume-up"></i>
+              &nbsp; Latest Updates and Notice
+            </h4>
+            <div
+              class="marquee-content"
+              style="padding: 10px; font-weight: bold; font-size: 1.1em"
+            >
+              <marquee
+                onmouseover="stop()"
+                onmouseout="start()"
+                direction="up"
+                scrollamount="5"
+                height="380px"
+              >
+                <!-- Notice Content -->
+                <p style="font-weight: bold">
+                  <span
+                    class="glyphicon glyphicon-hand-right"
+                    style="color: #3743fa"
+                  >
+                    <strong style="color: red">Notice Title</strong
+                    ><br /><br />Notice Information
+                  </span>
+                </p>
+                <hr />
+              </marquee>
+            </div>
+          </div>
+          <br />
+          <div class="approved">
+            <marquee
+              onmouseover="stop()"
+              onmouseout="start()"
+              direction="up"
+              scrollamount="5"
+              height="380px"
+            >
+              <!-- Approved Content -->
+              <p style="font-weight: bold">
+                <span
+                  class="glyphicon glyphicon-hand-right"
+                  style="color: #3743fa"
+                >
+                  <strong style="color: red">Approved Title</strong
+                  ><br /><br />Approved Information
+                </span>
+              </p>
+              <hr />
+            </marquee>
+          </div>
+          <br />
+        </div>
+
+        <div class="registration">
+          <div
+            class="marquee"
+            style="border: 2px black hidden; background-color: white"
+          >
+            <h4
+              style="
+                background-color: black;
+                margin-top: -1.8px;
+                margin-bottom: 1px;
+                padding: 5px;
+                text-align: center;
+                color: red;
+                font-weight: bold;
+              "
+            >
+              &nbsp; <span id="pagetitle">Vendor Registration</span>
+            </h4>
+            <div
+              class="marquee-content"
+              style="
+                align-items: center;
+                padding-top: 5px;
+                min-height: 750px;
+                background-color: cyan;
+              "
+            >
+              <table
+                class="tab hd"
+                style="color: blue; margin-bottom: 50px; background-color: white"
+              >
+                <tr>
+                  <td id="show"></td>
+                </tr>
+              </table>
+              <table class="tab hd brown">
+                <tr>
+                  <td style="color: brown">Register New Vendor</td>
+                </tr>
+              </table>
+              <table
+                class="tab hd blue"
+                border="0px"
+                cellpadding="10"
+                cellspacing="10"
+              >
+                <tr>
+                  <td>
+                    <form action="RegisterSrv" method="post">
+                      <br />
+                      Vendor Name:
+                      <input
+                        type="text"
+                        name="vname"
+                        required="required"
+                      /><br /><br />
+                      Email Id:
+                      <input
+                        type="email"
+                        name="vemail"
+                        required="required"
+                      /><br /><br />
+                      Mobile No.:
+                      <input
+                        type="phone"
+                        name="vmob"
+                        required="required"
+                      /><br /><br />
+                      Address:
+                      <input
+                        type="text"
+                        name="vaddr"
+                        required="required"
+                      /><br /><br />
+                      Company:
+                      <input
+                        type="text"
+                        name="cname"
+                        required="required"
+                      /><br /><br />
+                      Password:
+                      <input
+                        type="password"
+                        name="vpass"
+                        required="required"
+                      /><br /><br />
+                      <input type="submit" value="Register" name="user" />
+                    </form>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Footer Content</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/SpryTabbedPanels.css" type="text/css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Black+Ops+One"
+      rel="stylesheet"
+    />
+    <link href="css/bootstrap-dropdownhover.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style2.css" />
+
+    <style>
+      /* CSS for the menu */
+      .menubar {
+        background-color: white;
+      }
+
+      .nav li {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-menu a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-menu a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      .navbar-form {
+        margin-top: 8px;
+        margin-left: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menubar secondnav">
+      <div id="menucontent" class="container secondnav">
+        <div
+          id="collapsable-nav"
+          class="collapse navbar-collapse hidden-lg hidden-md"
+        >
+          <ul id="nav-list" class="nav navbar-nav navbar-left pull-left">
+            <li id="navHomeButton">
+              <a href="index.html">
+                <span class="glyphicon glyphicon-home"></span> Home
+              </a>
+            </li>
+            <li class="dropdown">
+              <a
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                data-hover="dropdown"
+                data-animations="fadeIn fadeInLeft fadeInUp fadeInRight"
+              >
+                Tenders
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="vendorViewTender.html">View all Tenders</a></li>
+                <li><a href="loginFailed.html">Apply for a Tender</a></li>
+                <li><a href="loginFailed.html">Bid Approval Status</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                data-hover="dropdown"
+                data-animations="fadeIn fadeInLeft fadeInUp fadeInRight"
+              >
+                Vendors
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="loginFailed.html">List of vendors</a></li>
+                <li><a href="loginFailed.html">Approval Status</a></li>
+                <li><a href="loginFailed.html">Search Vendor</a></li>
+              </ul>
+            </li>
+            <li><a href="register.html">Register</a></li>
+            <li>
+              <form
+                class="navbar-form hidden-xs"
+                action="vendorSearchTender.html"
+              >
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Find Tenders by name"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

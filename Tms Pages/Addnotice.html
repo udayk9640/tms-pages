@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/png" href="images/Banner_Hit.png" />
+    <!--link rel="shortcut icon" type="image/ico" href="images/hit_fevicon.ico"-->
+
+    <meta charset="ISO-8859-1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tender Management System</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/annimate.css" />
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/SpryTabbedPanels.css" type="text/css" rel="stylesheet" />
+    <!--link rel="stylesheet" href="css/styles.css"-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Black+Ops+One"
+      rel="stylesheet"
+    />
+    <link href="css/bootstrap-dropdownhover.min.css" />
+    <link rel="stylesheet" href="css/style2.css" />
+  </head>
+  <body>
+    <!-- Include the header of the page -->
+    <div>
+      <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header my-1">
+            <a href="#" class="pull-left">
+              <img
+                src="images/hit1.jpg"
+                alt="HIT Haldia"
+                width="70px"
+                height="70px"
+              />
+            </a>
+            <a class="navbar-brand" href="#"
+              ><h1>Tender Management System</h1></a
+            >
+            <a href="#"><p>A HIT Haldia Project</p></a>
+          </div>
+          <ul class="nav navbar-nav navbar-right menusize pull-right">
+            <li>
+              <a href="viewProfile.jsp"
+                ><span class="glyphicon glyphicon-user"></span>Profile</a
+              >
+            </li>
+            <li>
+              <a href="LogoutSrv"
+                ><span class="glyphicon glyphicon-log-in"></span> Logout</a
+              >
+            </li>
+          </ul>
+          <div class="navbar-header pull-left hidden-lg hidden-md">
+            <button
+              id="navbarToggle"
+              type="button"
+              class="btn btn-primary navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#collapsable-nav"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- Additional content for addnotice.html starts here -->
+
+      <div
+        class="clearfix hidden-sm hidden-xs"
+        style="
+          color: white;
+          background-color: green;
+          margin-top: -15px;
+          margin-bottom: 12px;
+        "
+      >
+        <marquee>Welcome to Tender Management Site</marquee>
+      </div>
+      <div class="container-fluid">
+        <div class="notice">
+          <div class="col-md-3" style="margin-left: 2%">
+            <!-- Contents from notice.jsp go here -->
+          </div>
+        </div>
+        <div class="col-md-8">
+          <table style="border-radius: 10px">
+            <tr>
+              <td
+                id="show"
+                style="min-width: 632px; min-height: 0px; color: blue"
+              >
+                Enter Notice Details Below
+              </td>
+            </tr>
+          </table>
+          <form action="AddNoticeSrv" method="post">
+            <table style="background-color: white">
+              <thead>
+                <tr>
+                  <th colspan="2">Add Notice</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="color: red">Notice Title:</td>
+                  <td>
+                    <input type="text" name="title" required="required" />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color: red">Description:</td>
+                  <td>
+                    <textarea
+                      rows="4"
+                      cols="40"
+                      style="font-size: 15px"
+                      name="info"
+                      required="required"
+                    ></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" align="center" value="Launch">
+                    <input
+                      type="submit"
+                      style="background-color: #660033; color: white"
+                      value="Add Notice to Notice Board"
+                      name="user"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+      <style>
+        input,
+        textarea,
+        select {
+          min-width: 450px;
+          font-size: 16px;
+          background-color: #f8f8f8;
+        }
+        input:hover,
+        textarea:hover,
+        select:hover {
+          min-width: 450px;
+          background-color: white;
+        }
+        table,
+        th,
+        td {
+          margin-bottom: 10px;
+          margin-left: 20%;
+          font-size: 20px;
+          border: 2px solid green;
+          text-align: center;
+          background-color: white;
+          color: #003399;
+        }
+        td {
+          padding: 20px;
+          background-color: none;
+        }
+        th {
+          padding: 20px;
+          background-color: #660033;
+          color: white;
+          font-weight: bold;
+        }
+      </style>
+    </div>
+
+    <!-- Include the admin menu -->
+    <div>
+      <!-- Contents of adminMenu.jsp would be here -->
+    </div>
+
+    <div
+      class="clearfix hidden-sm hidden-xs"
+      style="
+        color: white;
+        background-color: green;
+        margin-top: -15px;
+        margin-bottom: 12px;
+      "
+    >
+      <marquee>Welcome to Tender Management Site</marquee>
+    </div>
+    <!-- A green color line between header and body part -->
+
+    <div class="container-fluid">
+      <div class="notice">
+        <div class="col-md-3" style="margin-left: 2%">
+          <div>
+            <!-- Contents of notice.jsp would be here -->
+          </div>
+          <br />
+          <div>
+            <!-- Contents of approved.jsp would be here -->
+          </div>
+          <br />
+        </div>
+        <!-- End of col-md-3 -->
+      </div>
+      <!-- End of notice class -->
+
+      <!-- Next part of the same container-fluid in which gallery or other information will be shown -->
+      <div class="col-md-8">
+        <table style="border-radius: 10px">
+          <tr>
+            <td
+              id="show"
+              style="min-width: 632px; min-height: 0px; color: blue"
+            >
+              Enter Notice Details Below
+            </td>
+          </tr>
+        </table>
+
+        <form action="AddNoticeSrv" method="post">
+          <table style="background-color: white">
+            <thead>
+              <tr>
+                <th colspan="2">Add Notice</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="color: red">Notice Title:</td>
+                <td><input type="text" name="title" required="required" /></td>
+              </tr>
+              <tr>
+                <td style="color: red">Description:</td>
+                <td>
+                  <textarea
+                    rows="4"
+                    cols="40"
+                    style="font-size: 15px"
+                    name="info"
+                    required="required"
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center" value="Launch">
+                  <input
+                    type="submit"
+                    style="background-color: #660033; color: white"
+                    value="Add Notice to Notice Board"
+                    name="user"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+    <!-- End of container-fluid -->
+
+    <!-- Including the footer of the page -->
+    <div>
+      <!-- Contents of footer.jsp would be here -->
+    </div>
+
+    <style>
+      input,
+      textarea,
+      select {
+        min-width: 450px;
+        font-size: 16px;
+        background-color: #f8f8f8;
+      }
+      input:hover,
+      textarea:hover,
+      select:hover {
+        min-width: 450px;
+        background-color: white;
+      }
+      table,
+      th,
+      td {
+        margin-bottom: 10px;
+        margin-left: 20%;
+        font-size: 20px;
+        border: 2px solid green;
+        text-align: center;
+        background-color: white;
+        color: #003399;
+      }
+      td {
+        padding: 20px;
+        background-color: none;
+      }
+      th {
+        padding: 20px;
+        background-color: #660033;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ajax-utils.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap-dropdownhover.min.js"></script>
+  </body>
+</html>
